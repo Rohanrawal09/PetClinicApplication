@@ -18,7 +18,7 @@
 
     <groupId>com.rouge</groupId>
     <artifactId>petclinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <name>petclinic</name>
     <description>Pet Clinic App</description>
@@ -56,7 +56,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:Rohanrawal09/PetClinicApplication.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>petclinic-0.0.1</tag>
   </scm>
 
 </project>
