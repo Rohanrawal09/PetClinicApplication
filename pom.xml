@@ -56,7 +56,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:Rohanrawal09/PetClinicApplication.git</developerConnection>
-      <tag>petclinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
