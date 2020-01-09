@@ -1,14 +1,16 @@
 package com.rouge.petclinic.services.map;
 
 import com.rouge.petclinic.model.Pet;
-import com.rouge.petclinic.services.CrudService;
+import com.rouge.petclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created By Rohan Rawal On 1/8/2020
  */
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
 
     @Override
     public Pet findById(Long id) {
