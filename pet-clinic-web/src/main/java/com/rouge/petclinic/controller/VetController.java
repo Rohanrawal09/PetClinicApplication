@@ -1,6 +1,8 @@
 package com.rouge.petclinic.controller;
 
+import com.rouge.petclinic.services.VetService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -9,8 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class VetController {
 
-    @RequestMapping({"/vet","/vet/index","/vet/index.html"})
-    public String callIndex(){
+    private final VetService vetService;
+
+    public VetController(VetService vetService) {
+        this.vetService = vetService;
+    }
+
+
+    @RequestMapping({"/vets","/vets/index","/vets/index.html"})
+    public String callIndex(Model model){
+
+        model.addAttribute("vets",vetService.findAll());
         return "vet/index";
+
     }
 }
