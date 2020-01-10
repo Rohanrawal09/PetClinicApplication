@@ -1,6 +1,7 @@
 package com.rouge.petclinic.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -12,5 +13,10 @@ public class IndexController {
     @RequestMapping({"","/","/index","/index.html"})
     public String callIndex(){
         return "index";
+    }
+
+    @RequestMapping("/oups")
+    public String callNotImplemented(Model model){
+        return "notImplemented";
     }
 }

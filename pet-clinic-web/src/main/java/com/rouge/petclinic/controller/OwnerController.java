@@ -18,11 +18,16 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
-    @RequestMapping({"/find","/find/index","/find/index.html"})
+    @RequestMapping({"/","/index","/index.html"})
     public String callIndex(Model model){
 
         model.addAttribute("owners",ownerService.findAll());
         return "owner/index";
 
+    }
+
+    @RequestMapping({"/find","/find/index","/find/index.html"})
+    public String callNotImplemented(Model model){
+        return "notImplemented";
     }
 }
