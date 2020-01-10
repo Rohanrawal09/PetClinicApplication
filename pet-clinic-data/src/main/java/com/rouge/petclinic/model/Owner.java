@@ -1,16 +1,27 @@
 package com.rouge.petclinic.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  * Created By Rohan Rawal On 07/01/2020
  */
+//cascade means if you delete in owner that will delete the relation
+@Entity
+@Table(name = "owners")
 public class Owner extends Person{
 
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "city")
     private String city;
+
+    @Column(name = "telephone")
     private String telephone;
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
     public String getAddress() {
